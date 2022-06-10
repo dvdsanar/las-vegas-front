@@ -1,8 +1,6 @@
 import { devToolsEnhancer } from "redux-devtools-extension";
 import { createStore } from "redux";
 
-//import { configureStore } from "@reduxjs/toolkit";
-
 const initialState = {
   logged: false,
   popup: { visibility: false, text: "" },
@@ -39,5 +37,3 @@ const reductor = (state = initialState, action) => {
 };
 
 export default createStore(reductor, devToolsEnhancer());
-
-//export default configureStore(reductor, devToolsEnhancer());
