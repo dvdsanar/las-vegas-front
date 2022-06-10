@@ -5,6 +5,7 @@ import Header from "./components/Header/Header.js";
 import Footer from "./components/Footer/Footer";
 import LoginUser from "./containers/LoginUser/LoginUser";
 import Home from "./components/Home/Home";
+import Register from "./containers/Register/Register";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<LoginUser />}></Route>
+          <Route path="/register" element={<Register />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
