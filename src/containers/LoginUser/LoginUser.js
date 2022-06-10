@@ -35,6 +35,7 @@ const LoginUser = () => {
         localStorage.setItem("id", loginUser.id);
         localStorage.setItem("rol", loginUser.rol);
         if (localStorage.getItem("rol") == "admin") {
+          dispatch(actionCreator(USER_LOGGED));
           navigate("/allusers");
         } else {
           dispatch(actionCreator(USER_LOGGED));
