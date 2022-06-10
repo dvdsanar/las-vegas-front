@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import LoginUser from "./containers/LoginUser/LoginUser";
 import Home from "./components/Home/Home";
 import Register from "./containers/Register/Register";
+import PopUp from "./containers/PopUp/PopUp";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/login" element={<LoginUser />}></Route>
           <Route path="/register" element={<Register />}></Route>
         </Routes>
+        <PopUp />
         <Footer />
       </BrowserRouter>
     </div>
