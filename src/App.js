@@ -7,6 +7,7 @@ import LoginUser from "./containers/LoginUser/LoginUser";
 import Home from "./components/Home/Home";
 import Register from "./containers/Register/Register";
 import PopUp from "./containers/PopUp/PopUp";
+import User from "./containers/User/User";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<LoginUser />}></Route>
           <Route path="/register" element={<Register />}></Route>
+          <Route path="/user" element={<User />}></Route>
         </Routes>
         <PopUp />
         <Footer />
