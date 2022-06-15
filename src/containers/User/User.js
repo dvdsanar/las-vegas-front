@@ -34,7 +34,17 @@ const User = () => {
             <p> Nombre: {user.name}</p>
             <p> email: {user.email}</p>
             <p> Tarjeta: {user.card}</p>
-            <p> Saldo: {user.balance}</p>
+            <p>
+              {" "}
+              Saldo: {user.balance}{" "}
+              <button
+                type="button"
+                className="botonOpcionesUsuario"
+                onClick={() => navigate("/addBalance/" + user._id)}
+              >
+                Añadir Saldo
+              </button>
+            </p>
             <div className="botonesOpciones">
               <button
                 type="button"
