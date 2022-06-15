@@ -10,6 +10,7 @@ import PopUp from "./containers/PopUp/PopUp";
 import User from "./containers/User/User";
 import ModifyUser from "./containers/ModifyUser/ModifyUser";
 import AddCard from "./containers/AddCard/AddCard";
+import AddBalance from "./containers/AddBalance/AddBalance";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/user" element={<User />}></Route>
           <Route path="/modifyUser/:id" element={<ModifyUser />}></Route>
           <Route path="/addCard/:id" element={<AddCard />}></Route>
+          <Route path="/addBalance/:id" element={<AddBalance />}></Route>
         </Routes>
         <PopUp />
         <Footer />
