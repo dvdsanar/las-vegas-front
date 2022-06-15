@@ -39,7 +39,6 @@ const ModifyUser = () => {
         password: e.target[2].value,
       };
 
-      console.log(params.id);
       const patchUser = await fetch(
         "https://las-vegas-roulette.herokuapp.com/users/" + params.id,
         {
@@ -65,7 +64,7 @@ const ModifyUser = () => {
       <h1 className="h1ModificarUsuario">Modifica tus datos</h1>
       <form onSubmit={(e) => formSubmit(e)} className="formpatchUsuarios">
         <label htmlFor="name" className="labelModificar">
-          Modifica tu nombre {users.nombre}
+          Nombre:
         </label>
         <input
           className="inputModificarUsuario"
@@ -75,7 +74,7 @@ const ModifyUser = () => {
           defaultValue={users.name}
         />
         <label htmlFor="email" className="labelModificar">
-          Modifica tu correo electronico
+          Correo electronico:
         </label>
         <input
           className="inputModificarUsuario"
@@ -85,7 +84,7 @@ const ModifyUser = () => {
           defaultValue={users.email}
         />
         <label htmlFor="password" className="labelModificar">
-          Modifica tu contraseña
+          Contraseña
         </label>
         <input
           className="inputModificarUsuario"
