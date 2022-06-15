@@ -8,6 +8,7 @@ import Home from "./components/Home/Home";
 import Register from "./containers/Register/Register";
 import PopUp from "./containers/PopUp/PopUp";
 import User from "./containers/User/User";
+import ModifyUser from "./containers/ModifyUser/ModifyUser";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={<LoginUser />}></Route>
           <Route path="/register" element={<Register />}></Route>
           <Route path="/user" element={<User />}></Route>
+          <Route path="/modifyUser/:id" element={<ModifyUser />}></Route>
         </Routes>
         <PopUp />
         <Footer />
