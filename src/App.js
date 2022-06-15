@@ -9,6 +9,7 @@ import Register from "./containers/Register/Register";
 import PopUp from "./containers/PopUp/PopUp";
 import User from "./containers/User/User";
 import ModifyUser from "./containers/ModifyUser/ModifyUser";
+import AddCard from "./containers/AddCard/AddCard";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/register" element={<Register />}></Route>
           <Route path="/user" element={<User />}></Route>
           <Route path="/modifyUser/:id" element={<ModifyUser />}></Route>
+          <Route path="/addCard/:id" element={<AddCard />}></Route>
         </Routes>
         <PopUp />
         <Footer />
