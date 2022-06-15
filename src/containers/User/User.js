@@ -14,11 +14,9 @@ const User = () => {
         method: "GET",
       }
     );
-    console.log(userRes);
 
     const dataUser = await userRes.json();
     setUsers(dataUser);
-    console.log(dataUser);
   };
   useEffect(() => {
     try {
@@ -27,8 +25,6 @@ const User = () => {
       console.log(error);
     }
   }, []);
-
-  console.log("esto es lo que tiene usuarios: " + users.name);
 
   return (
     <div>
@@ -43,14 +39,14 @@ const User = () => {
               <button
                 type="button"
                 className="botonOpcionesUsuario"
-                onClick={() => navigate("/modifyUser/" + user.id)}
+                onClick={() => navigate("/modifyUser/" + user._id)}
               >
                 Modificar datos
               </button>
               <button
                 type="button"
                 className="botonOpcionesUsuario"
-                onClick={() => navigate("/addCard/" + user.id)}
+                onClick={() => navigate("/addCard/" + user._id)}
               >
                 Añadir Tarjeta
               </button>
@@ -58,7 +54,7 @@ const User = () => {
                 type="button"
                 className="botonOpcionesUsuario"
                 onClick={
-                  () => navigate("/play/" + user.id) /*modicar back para esto*/
+                  () => navigate("/play/" + user._id) /*modicar back para esto*/
                 }
               >
                 Jugar
@@ -66,7 +62,7 @@ const User = () => {
               <button
                 type="button"
                 className="botonOpcionesUsuario"
-                onClick={() => navigate("/userGames/" + user.id)}
+                onClick={() => navigate("/userGames/" + user._id)}
               >
                 Historial de Partidas
               </button>
